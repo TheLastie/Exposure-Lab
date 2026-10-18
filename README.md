@@ -16,7 +16,7 @@ Open `index.html` in a modern browser. The calculator runs locally; Google Fonts
 
 ## Project image
 
-Add a genuine screenshot of the running application to `screenshots/exposure-lab.png` before publishing the repository. Do not use a mockup as a screenshot.
+![Exposure Lab running in a desktop browser](screenshots/exposure-lab.png)
 
 ## SEO and location
 
@@ -46,7 +46,7 @@ MIT
 
 ## Фото проекта
 
-Перед публикацией добавьте настоящий скриншот работающего приложения в `screenshots/exposure-lab.png`. Не выдавайте макет за скриншот.
+![Exposure Lab в браузере](screenshots/exposure-lab.png)
 
 ## SEO и география
 
