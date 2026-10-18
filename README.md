@@ -5,6 +5,7 @@ An interactive, browser-based exposure calculator for photographers. Adjust aper
 ## Features
 
 - Responsive Russian and English interface
+- Automatic theme follows the device setting; light and dark modes can be selected and remembered
 - Live exposure value and stop-difference readout
 - Lighting presets for daylight, overcast, indoor and night scenes
 - No account, server or build step required
@@ -16,7 +17,8 @@ Open `index.html` in a modern browser. The calculator runs locally; Google Fonts
 
 ## Project image
 
-![Exposure Lab running in a desktop browser](screenshots/exposure-lab.png)
+![Exposure Lab in light mode](screenshots/exposure-lab-light.png)
+![Exposure Lab in dark mode](screenshots/exposure-lab-dark.png)
 
 ## SEO and location
 
@@ -35,6 +37,7 @@ MIT
 ## Возможности
 
 - Адаптивный интерфейс на русском и английском
+- Автотема следует настройке устройства; светлый и тёмный режимы можно выбрать и сохранить
 - Расчёт экспозиционного числа и отклонения в стопах в реальном времени
 - Пресеты для ясного дня, пасмурной погоды, помещения и ночи
 - Не требует регистрации, сервера или сборки
@@ -46,7 +49,8 @@ MIT
 
 ## Фото проекта
 
-![Exposure Lab в браузере](screenshots/exposure-lab.png)
+![Exposure Lab в светлой теме](screenshots/exposure-lab-light.png)
+![Exposure Lab в тёмной теме](screenshots/exposure-lab-dark.png)
 
 ## SEO и география
 
