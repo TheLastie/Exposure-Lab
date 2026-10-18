@@ -6,7 +6,7 @@ An interactive, browser-based exposure calculator for photographers. Adjust aper
 
 - Responsive Russian and English interface
 - Automatic theme follows the device setting; light and dark modes can be selected and remembered
-- Camera-setting tabs for exposure, autofocus, white balance, tint and picture profiles
+- Camera-setting tabs with a live depth-of-field preview and a visual white-balance/profile preview
 - Live exposure value and stop-difference readout
 - Lighting presets for daylight, overcast, indoor and night scenes
 - No account, server or build step required
@@ -41,7 +41,7 @@ MIT
 
 - Адаптивный интерфейс на русском и английском
 - Автотема следует настройке устройства; светлый и тёмный режимы можно выбрать и сохранить
-- Вкладки с настройками экспозиции, автофокуса, баланса белого, оттенка и цветового профиля
+- Вкладки настроек с наглядным предпросмотром глубины резкости, баланса белого и цветового профиля
 - Расчёт экспозиционного числа и отклонения в стопах в реальном времени
 - Пресеты для ясного дня, пасмурной погоды, помещения и ночи
 - Не требует регистрации, сервера или сборки
