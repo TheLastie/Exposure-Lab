@@ -11,6 +11,7 @@ An interactive, browser-based exposure calculator for photographers. Adjust aper
 - White balance shifts the site palette; focus distance changes the site's depth-of-field effect
 - Live exposure value and stop-difference readout
 - Lighting presets for daylight, overcast, indoor and night scenes
+- Save the current scene, exposure, focus and white-balance settings as a field note
 - No account, server or build step required
 - Search metadata, social preview tags and structured data are included
 
@@ -45,6 +46,7 @@ MIT
 - Автотема следует настройке устройства; светлый и тёмный режимы можно выбрать и сохранить
 - Вкладки настроек с наглядным предпросмотром глубины резкости, баланса белого и цветового профиля
 - Рабочие автоэкспозиция, автоматический баланс белого по сцене и режимы автофокусировки
+- Сохранение сцены, экспозиции, фокуса и баланса белого в текстовую заметку съёмки
 - Баланс белого меняет палитру сайта, а дистанция фокусировки — размытие его элементов
 - Расчёт экспозиционного числа и отклонения в стопах в реальном времени
 - Пресеты для ясного дня, пасмурной погоды, помещения и ночи

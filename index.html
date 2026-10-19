@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#eeeae1" />
     <script>try{const savedTheme=localStorage.getItem('exposure-theme');if(savedTheme==='light'||savedTheme==='dark')document.documentElement.dataset.theme=savedTheme}catch{}</script>
-    <meta name="description" content="Интерактивный калькулятор экспозиции: оцените сочетание диафрагмы, выдержки и ISO." />
+    <meta name="description" content="Подберите экспозицию по условиям сцены, проверьте фокус и баланс белого, затем сохраните настройки съёмки в текстовую заметку." />
     <meta name="keywords" content="калькулятор экспозиции, фотография, выдержка, диафрагма, ISO" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Exposure Lab — калькулятор экспозиции" />
-    <meta property="og:description" content="Подберите экспозицию и изучите взаимосвязь диафрагмы, выдержки и ISO." />
-    <meta property="og:url" content="https://example.com/exposure-calculator/" />
-    <meta property="og:image" content="https://example.com/exposure-calculator/screenshots/exposure-lab.png" />
+    <meta property="og:description" content="Подберите экспозицию, фокус и баланс белого, а настройки сцены сохраните в заметку для фотодневника." />
+    <meta property="og:url" content="https://thelastie.github.io/Exposure-Lab/" />
+    <meta property="og:image" content="https://thelastie.github.io/Exposure-Lab/screenshots/exposure-lab.png" />
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta name="twitter:card" content="summary" />
-    <link rel="canonical" href="https://example.com/exposure-calculator/" />
-    <link rel="alternate" hreflang="ru" href="https://example.com/exposure-calculator/" />
-    <link rel="alternate" hreflang="en" href="https://example.com/exposure-calculator/?lang=en" />
-    <link rel="alternate" hreflang="x-default" href="https://example.com/exposure-calculator/" />
+    <link rel="canonical" href="https://thelastie.github.io/Exposure-Lab/" />
+    <link rel="alternate" hreflang="ru" href="https://thelastie.github.io/Exposure-Lab/" />
+    <link rel="alternate" hreflang="en" href="https://thelastie.github.io/Exposure-Lab/?lang=en" />
+    <link rel="alternate" hreflang="x-default" href="https://thelastie.github.io/Exposure-Lab/" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23d4f36a'/%3E%3Cpath d='M20 7 32 29H8z' fill='none' stroke='%23111411' stroke-width='2'/%3E%3Ccircle cx='20' cy='22' r='4' fill='%23111411'/%3E%3C/svg%3E" />
     <title>Exposure Lab — калькулятор экспозиции</title>
     <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"WebApplication","name":"Exposure Lab","applicationCategory":"PhotographyApplication","operatingSystem":"Any","inLanguage":["ru","en"],"description":"An interactive exposure calculator for photographers."}
+      {"@context":"https://schema.org","@type":"WebApplication","name":"Exposure Lab","applicationCategory":"PhotographyApplication","operatingSystem":"Any","inLanguage":["ru","en"],"description":"An interactive camera-setting field tool that models exposure, focus, and white balance, and saves a concise field note."}
     </script>
     <script type="application/ld+json" id="faqSchema">
       {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Что такое экспозиция в фотографии?","acceptedAnswer":{"@type":"Answer","text":"Экспозиция — количество света, попавшего на матрицу. На неё влияют диафрагма, выдержка и ISO."}},{"@type":"Question","name":"Что означает EV?","acceptedAnswer":{"@type":"Answer","text":"EV, или экспозиционное число, описывает яркость сцены и сочетание настроек камеры. Изменение на одну ступень удваивает или уменьшает вдвое количество света."}}]}
@@ -84,6 +84,7 @@
       .topbar,.hero,.result,.learn,.faq,.foot{filter:blur(var(--site-focus-blur));transition:filter .2s ease}#calculator>.controls{filter:none}
       @media(max-width:680px){.settings-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;overflow:visible}.setting-tab{min-width:0;padding:12px 4px 11px;white-space:normal;line-height:1.2;text-align:center;font-size:clamp(10px,3.2vw,13px)}}
     </style>
+    <link rel="stylesheet" href="field-note.css" />
   </head>
   <body>
     <div class="shell">
@@ -144,6 +145,7 @@
               <div class="color-caption-detail" id="colorCaptionDetail">Стандартный · нейтральный оттенок</div>
             </section>
             <span class="sr-only" id="cameraEv">EV 9.0</span><span class="sr-only" id="cameraSummary">AF-S · 5500 K · Standard</span><span class="sr-only" id="hintText">Настройки сбалансированы для выбранного освещения.</span>
+            <div class="field-note-action"><button class="field-note-button" id="saveFieldNote" type="button">Сохранить заметку съёмки <span aria-hidden="true">↓</span></button><span id="fieldNoteStatus" class="field-note-status" aria-live="polite"></span></div>
           </aside>
         </section>
         <section class="learn" id="about" aria-labelledby="learnTitle"><div><div class="eyebrow" data-i18n="learnEyebrow">Коротко о главном</div><h2 id="learnTitle" data-i18n="aboutTitle">Как работает экспозиция</h2><p class="learn-intro" data-i18n="aboutBody">Экспозиция — это количество света, которое камера собирает для кадра. Три настройки управляют светом по-разному.</p></div><div class="learn-grid"><article class="learn-card"><h3 data-i18n="cardA">Диафрагма · глубина резкости</h3><p data-i18n="cardAText">Меньшее число f открывает объектив шире и размывает фон. Большее число сохраняет резкость на большей глубине.</p></article><article class="learn-card"><h3 data-i18n="cardS">Выдержка · движение</h3><p data-i18n="cardSText">Короткая выдержка останавливает движение. Длинная собирает больше света и может добавить смаз.</p></article><article class="learn-card"><h3 data-i18n="cardI">ISO · чувствительность</h3><p data-i18n="cardIText">Высокое ISO помогает в темноте, но часто добавляет изображению цифровой шум.</p></article><article class="learn-card"><h3 data-i18n="cardEv">EV · яркость сцены</h3><p data-i18n="cardEvText">Одна ступень экспозиции означает вдвое больше или меньше света. Экспонометр сравнивает выбранные настройки с пресетом сцены.</p></article></div></section>
@@ -197,5 +199,6 @@
       $('language').addEventListener('click',updateModeLabels);updateModeLabels();setAutofocusPreview();
     </script>
     <script src="preview-bridge.js" defer></script>
+    <script src="field-note.js" defer></script>
   </body>
 </html>

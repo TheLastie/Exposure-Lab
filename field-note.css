@@ -1,0 +1,35 @@
+.field-note-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.field-note-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--text);
+  font: 600 12px/1 var(--sans);
+  cursor: pointer;
+  transition: border-color .2s, color .2s, background .2s, transform .2s;
+}
+
+.field-note-button span { color: var(--accent); font-size: 16px; }
+.field-note-button:hover { transform: translateY(-1px); border-color: var(--accent); color: var(--accent); }
+.field-note-button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.field-note-status { min-height: 1em; color: var(--accent); font-size: 11px; text-align: right; }
+
+@media (max-width: 520px) {
+  .field-note-action { align-items: flex-start; flex-direction: column; }
+  .field-note-button { width: 100%; justify-content: space-between; }
+  .field-note-status { min-height: 0; }
+}
