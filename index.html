@@ -82,6 +82,7 @@
       @media(max-width:800px){.exposure-meter{height:300px}}
       @media(max-width:480px){.exposure-meter{height:250px;margin:18px 0}.exposure-meter .meter-copy{left:10px;bottom:10px}}
       .topbar,.hero,.result,.learn,.faq,.foot{filter:blur(var(--site-focus-blur));transition:filter .2s ease}#calculator>.controls{filter:none}
+      @media(max-width:680px){.settings-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;overflow:visible}.setting-tab{min-width:0;padding:12px 4px 11px;white-space:normal;line-height:1.2;text-align:center;font-size:clamp(10px,3.2vw,13px)}}
     </style>
   </head>
   <body>
@@ -195,5 +196,6 @@
       document.querySelectorAll('[data-camera-tab]').forEach(tab=>tab.addEventListener('click',()=>{if(tab.dataset.cameraTab==='focus')setAutofocusPreview()}));
       $('language').addEventListener('click',updateModeLabels);updateModeLabels();setAutofocusPreview();
     </script>
+    <script src="preview-bridge.js" defer></script>
   </body>
 </html>
