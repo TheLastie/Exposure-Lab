@@ -1,5 +1,7 @@
 # Exposure Lab
 
+## English
+
 An interactive, browser-based exposure calculator for photographers. Adjust aperture, shutter speed and ISO, choose a lighting preset, and compare the camera reading with the scene.
 
 ## Features
@@ -36,7 +38,7 @@ MIT
 
 ---
 
-# Exposure Lab (RU)
+## Русский
 
 Интерактивный калькулятор экспозиции для фотографов. Меняйте диафрагму, выдержку и ISO, выбирайте пресет освещения и сравнивайте показание камеры со сценой.
 
