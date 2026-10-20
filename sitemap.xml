@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/exposure-calculator/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://example.com/exposure-calculator/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/exposure-calculator/?lang=en" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/exposure-calculator/" />
+    <loc>https://thelastie.github.io/Exposure-Lab/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://thelastie.github.io/Exposure-Lab/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thelastie.github.io/Exposure-Lab/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thelastie.github.io/Exposure-Lab/" />
   </url>
 </urlset>
